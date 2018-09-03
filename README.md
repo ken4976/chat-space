@@ -55,7 +55,7 @@ Things you may want to cover:
 -has_many :members
 -accept_nested_attributes_for :group_users
 
-##messagesテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |body|text|null: false|
