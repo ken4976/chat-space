@@ -51,7 +51,6 @@ Things you may want to cover:
 
 ### Association
 -has_many :users, through: :members
--has_many :members
 -has_many :messages
 -accept_nested_attributes_for :members
 
@@ -64,5 +63,5 @@ Things you may want to cover:
 |user_id|integer|foregin_key: true|
 
 ### Association
--belongs_to user
--belongs_to group
+-belongs_to :user
+-belongs_to :group
