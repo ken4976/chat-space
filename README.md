@@ -26,14 +26,13 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false,|
+|name|string|null: false, unique: true|
 |email|string|null: false, unique: true|
-|encrypted_password|string|null: false|
 
 ### Association
 -has_many :groups, throught: :members
 -has_many :members
-
+-has_many :messages
 
 ## membersテーブル
 |Column|Type|Options|
@@ -44,7 +43,6 @@ Things you may want to cover:
 ### Association
 -belongs_to :user
 -belongs_to :group
-
 
 ##groupsテーブル
 |Column|Type|Options|
@@ -66,4 +64,3 @@ Things you may want to cover:
 
 ### Association
 -belongs_to user
-
