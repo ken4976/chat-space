@@ -29,9 +29,6 @@ Things you may want to cover:
 |name|string|null: false, unique: true|
 |email|string|null: false, unique: true|
 
-### Association
--has_many :groups, throught: :members
--has_many :messages
 
 ## membersテーブル
 |Column|Type|Options|
@@ -39,19 +36,14 @@ Things you may want to cover:
 |user_id|integer|foregin_key: true|
 |group_id|integer|foregin_key: true|
 
-### Association
--belongs_to :user
--belongs_to :group
+
 
 ##groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |group_name|string|null: false|
 
-### Association
--has_many :users, through: :members
--has_many :messages
--accept_nested_attributes_for :members
+
 
 ## messagesテーブル
 |Column|Type|Options|
@@ -61,6 +53,3 @@ Things you may want to cover:
 |group_id|integer|foregin_key: true|
 |user_id|integer|foregin_key: true|
 
-### Association
--belongs_to :user
--belongs_to :group
