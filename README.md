@@ -32,6 +32,7 @@ Things you may want to cover:
 
 ### Association
 -has_many :groups, throught: :members
+-has_many :members
 
 
 ## membersテーブル
@@ -45,15 +46,15 @@ Things you may want to cover:
 -belongs_to :group
 
 
-## groupsテーブル
+##groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |group_name|string|null: false|
 
 ### Association
--has_many :users, through: :group_users
+-has_many :users, through: :members
 -has_many :members
--accept_nested_attributes_for :group_users
+-accept_nested_attributes_for :members
 
 ## messagesテーブル
 |Column|Type|Options|
