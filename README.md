@@ -31,7 +31,6 @@ Things you may want to cover:
 
 ### Association
 -has_many :groups, throught: :members
--has_many :members
 -has_many :messages
 
 ## membersテーブル
