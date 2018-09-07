@@ -1,0 +1,167 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  height: 100vh;
+}
+
+.sidebar{
+  background-color: yellow;
+  float: left;
+
+}
+
+.sidebar-user{
+  background-color: #253141;
+  width: 260px;
+  height: 100px;
+  padding: 0 20px;
+}
+
+.sidebar-user__name{
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 100px;
+  float: left;
+  width: 150px;
+}
+
+.sidebar-user__edit{
+color: #FFFFFF;
+float: left;
+line-height: 100px;
+right: 0px;
+position: relative;
+}
+
+.sidebar-group{
+  background-color: #2f3e51;
+  width: 260px;
+  height: calc(100vh - 100px);
+  padding: 40px 20px 0px 20px;
+}
+
+.sidebar-group__name{
+  color: #FFFFFF;
+  font-size: 15px;
+}
+
+.sidebar-group__message{
+  color: #FFFFFF;
+  font-size: 11px;
+}
+
+
+
+.contents{
+  background-color: blue;
+  width: calc(100vw - 300px);
+  height: calc(100% + 40px);
+  float: right;
+}
+
+.content-top{
+  background-color: #FFFFFF;
+  height: 100px;
+  width: calc(100% - 80px);
+  border-bottom: solid 1px #eeeeee;
+  padding: 0 40px;
+}
+
+.content-top__group{
+  color: #333333;
+  font-size: 20px;
+  padding: 35px 50px 15px 0;
+  width: 200px;
+  }
+
+.content-top__members{
+  color: #999999;
+  font-size: 12px;
+}
+
+.btn[type="submit"]{
+  color: #38AEF0;
+  height: 40px;
+  width: 68px;
+  float: right;
+  position: absolute;
+  z-index: 2;
+  right: 40px;
+  top: 40px;
+  border-color: #38AEF0;
+}
+
+
+
+.content-main{
+  background-color: #FFFFFF;
+  height: calc(100% - 150px);
+  width: calc(100% - 80px);
+  padding: 0 40px;
+}
+
+.content-main__message{
+  padding: 46px 0 10px 0;
+}
+.content-main__message__name{
+float: left;
+padding: 0 10px 0 0;
+font-size: 16px;
+font-weight: bold;
+color: #434A54;
+}
+
+.content-main__message__days{
+  color: #999999;
+  font-size: 12px;
+
+}
+
+.content-main__message__message{
+  font-size: 14px;
+  color: #434A54;
+  clear: both;
+}
+
+
+.content-bottom{
+  background-color: #B8C3C7;;
+  height: 90px;
+  width: calc(100% - 80px);
+  padding: 10px 40px 10px 50px;
+  position: relative;
+  z-index: 2;
+ bottom: 62px;
+}
+
+
+
+.example{
+  width: 800px;
+  height: 50px;
+  margin: 20px 0 0 0;
+}
+
+.btn2[type="submit"]{
+  color: #FFFFFF;
+  background-color: #38AEF0;
+  height: 55px;
+  width: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
