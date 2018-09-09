@@ -2,13 +2,20 @@
 %body
   .sidebar
     .sidebar-user
-      .sidebar-user__name 名前名前名前名前
-      .sidebar-user__edit
-        %i.far.fa-edit
-        %i.fa.fa-cog
+      .sidebar-user__name
+        = current_user.name
+      %ul.sidebar-user__edit
+        .li
+          %list
+            = link_to do
+              = fa_icon 'edit', class: 'icon'
+          %list
+            = link_to edit_user_path(current_user) do
+              = fa_icon 'cog', class: 'icon'
     .sidebar-group
       .sidebar-group__name グループ名
-      .sidebar-group__message メッセーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーージ
+      .sidebar-group__message
+      メッセーーーーーーーーーーーーーーーーーーーーーーージ
   .contents
     .content-top
       .content-top__group グループ名
