@@ -1,89 +1,118 @@
 .contents{
   width: calc(100vw - 300px);
-  height: calc(100% + 40px);
+  height: calc(100vh + 40px);
   float: right;
   .content-top{
     background-color: #FFFFFF;
     height: 100px;
-    width: calc(100% - 80px);
+    width: calc(100vh - 80px);
     border-bottom: solid 1px #eeeeee;
     padding: 0 40px;
-      &__group{
-        color: #333333;
-        font-size: 20px;
-        padding: 35px 50px 15px 0;
-        width: 200px;
-  }
-      &__members{
-        color: #999999;
-        font-size: 12px;
-  }
-  .btn[type="submit"]{
-    color: #38AEF0;
-    height: 40px;
-    width: 68px;
-    float: right;
-    position: absolute;
-    z-index: 2;
-    right: 40px;
-    top: 40px;
-    border-color: #38AEF0;
-  }
+    &__group{
+      color: #333333;
+      font-size: 20px;
+      padding: 35px 50px 15px 0;
+      width: 200px;
+    }
+    &__members{
+      color: #999999;
+      font-size: 12px;
+    }
+    .btn[type="submit"]{
+      color: #38AEF0;
+      height: 40px;
+      width: 68px;
+      float: right;
+      position: absolute;
+      z-index: 2;
+      right: 40px;
+      top: 40px;
+      border-color: #38AEF0;
+    }
   }
   .content-main{
+    overflow: scroll;
     background-color: #FFFFFF;
-    height: calc(100% - 150px);
+    height: calc(100vh - 170px);
     width: calc(100% - 80px);
     padding: 0 40px;
-      &__message{
-        padding: 46px 0 10px 0;
-  }
-      &__message__name{
-        float: left;
-        padding: 0 10px 0 0;
-        font-size: 16px;
-        font-weight: bold;
-        color: #434A54;
-  }
-      &__message__days{
-        color: #999999;
-        font-size: 12px;
-  }
-      &__message__message{
-        font-size: 14px;
-        color: #434A54;
-        clear: both;
-  }
+    &__message{
+      padding: 46px 0 10px 0;
+    }
+    &__message__name{
+      float: left;
+      padding: 0 10px 0 0;
+      font-size: 16px;
+      font-weight: bold;
+      color: #434A54;
+    }
+    &__message__days{
+      color: #999999;
+      font-size: 12px;
+    }
+    &__message__message{
+      font-size: 14px;
+      color: #434A54;
+      clear: both;
+    }
   }
   .content-bottom{
     background-color: #B8C3C7;;
     height: 90px;
     width: calc(100% - 90px);
     padding: 10px 40px 10px 50px;
-    position: relative;
     z-index: 2;
     bottom: 62px;
-      .example{
-        width: 800px;
+    .content-bottom__form{
+              margin-top: 20px;
+      width: 750px;
+      height: 50px;
+      position: relative;
+      .form__message{
+        border: none;
+        width: 750px;
         height: 50px;
-        margin: 20px 0 0 0;
         font-size: 16px;
-  }
-      .btn2[type="submit"]{
-        float: right;
-        color: #FFFFFF;
-        background-color: #38AEF0;
-        height: 55px;
-        width: 100px;
-        bottom: -18px;
-        position: relative;
-  }
-      .fa.fa-image{
-        float: right;
-        position: relative;
-        z-index: 2;
-        bottom: 35px;
-        right: 140px;
-  }
-  }
-}
+        float: left;
+        display: block;
+      }
+    }
+      .form__mask{
+        line-height: 50px;
+        right: 0;
+        background-color: #FFF;
+        height: 50px;
+        display: inline;
+        position: absolute;
+        // float: right;
+        // position: relative;
+        // z-index: 2;
+        // bottom: 35px;
+        // right: -200px;
+        &__image{
+          .hidden{
+            display: none;
+          }
+        }
+      }
+    .form__submit{
+      float: right;
+      background-color: #38AEF0;
+      height: 55px;
+      width: 90px;
+      text-align: center;
+      line-height: 55px;
+      position: relative;
+      z-index: 2;
+      bottom: 50px;
+
+      background-color: #38AEF0;
+      border: none;
+      color: white;
+    }
+
+        // bottom: 55px;
+        // left: 410px;
+        // position: relative;
+      }
+    }
