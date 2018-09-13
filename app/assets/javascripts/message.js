@@ -2,11 +2,11 @@ $(function(){
 function buildHTML(message){
   var html = `<div class = content-main__message>
 <div class = content-main__message__name></div>
-  <%= message.user.name %>
+  ${message.user_name}
 <div class = content-main__message__days></div>
-  <%= message.created_at %>
+  ${message.created_at}
 <div class = content-main__message__message></div>
-  <%= message.content %>
+  ${message.content}
 </div>`
   return html;
 }
