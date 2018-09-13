@@ -9,6 +9,7 @@ ${message.created_at}
 </div>
 <div class = content-main__message__message>
 ${message.content}
+${message.image}
 </div>
 </div>`
   return html;
@@ -28,11 +29,12 @@ ${message.content}
   })
     .done(function(data){
       var html = buildHTML(data);
-      console.log(html);
       $('.content-main').append(html)
       $('.form__message').val('')
-      $('.content-main').animate({scrollTop: $('.content-main')[0].scrollHeight}, 'fast');
-
-});
-});
+      $('.content-main').animate({scrollTop: $('.content-main')[0].scrollHeight}, 'fast')
+})
+    .fail(function(){
+      alert('error');
+    })
+})
 });
