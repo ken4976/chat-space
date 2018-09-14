@@ -1,5 +1,6 @@
 .content-top
   .content-top__group
-    aaa
+    = @group.name
   %input{:class => "btn", :type => "submit", :value => "EDIT"}/
-  .content-top__members  ken takesi
+  .content-top__members
+    = current_user.name

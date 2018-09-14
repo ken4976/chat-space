@@ -1,8 +1,8 @@
 = form_for [@group, @message] do |f|
   .content-bottom__form
-    = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+    = f.text_field :content, class: 'form__message', placeholder: 'type a message',id: 'new_message'
     .form__mask
       = f.label :image, class: 'form__mask__image' do
         = f.file_field :image, class: 'hidden'
         = fa_icon 'image', class: 'icon'
-  = f.submit 'Send', class: 'form__submit'
+  = f.submit 'Send', class: 'form__submit', id:"button"

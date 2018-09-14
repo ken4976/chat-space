@@ -5,4 +5,5 @@
     = (message.created_at)
   .content-main__message__message
     = message.content
-    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+  - if message.image.present?
+    = image_tag message.image.url
