@@ -4,7 +4,7 @@ $(function(){
         message.image = ""
       }
     var html =
-              `<div class = content-main__message>
+              `<div class = content-main__message data-message-id="${message.id}">
                 <div class = content-main__message__name>
                   ${message.user_name}
                 </div>
@@ -41,4 +41,30 @@ $(function(){
         alert('error');
   })
   })
+// ここから自動更新機能
+  var interval = setInterval(function(){
+  // ルートパス取得
+    if (window.location.href.match(/\/groups\/\d+\/messages/)){
+      $.ajax({
+        url: location.href,
+        dataType: 'json'
+        })
+        .done(function(json){
+          var id = $('.content-main__message:last').data('messageId');
+          var insertHTML = '';
+          json.messages.forEach(function(message){
+            console.log(message)
+            if (message.id > id){
+            insertHTML += buildHTML(message);
+          }
+          });
+          $('.content-main').append(insertHTML);
+          $('.content-main').animate({scrollTop: $('.content-main')[0].scrollHeight}, 'fast')
+        })
+        .fail(function(json){
+          alert('自動更新に失敗しました')
+        });
+        }else{
+          clearInterval(interval);
+        }}, 5 * 1000);
 });
