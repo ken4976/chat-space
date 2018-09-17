@@ -7,7 +7,8 @@ before_action :set_group
     @messages = @group.messages.includes(:user)
      respond_to do |format|
       format.html
-      format.json
+      format.json {
+        @new_messages = @messages.includes(:user).where('id > ?', params[:last_id])}
     end
   end
 

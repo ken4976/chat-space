@@ -41,22 +41,23 @@ $(function(){
         alert('error');
   })
   })
+
 // ここから自動更新機能
   var interval = setInterval(function(){
   // ルートパス取得
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
+      var last_id = $('.content-main__message:last').data('message-id');
+      console.log("last_id:" + String(last_id));
       $.ajax({
         url: location.href,
-        dataType: 'json'
+        dataType: 'json',
+        data: {last_id: last_id}
         })
         .done(function(json){
-          var id = $('.content-main__message:last').data('messageId');
+          console.log(json)
           var insertHTML = '';
           json.messages.forEach(function(message){
-            console.log(message)
-            if (message.id > id){
             insertHTML += buildHTML(message);
-          }
           });
           $('.content-main').append(insertHTML);
           $('.content-main').animate({scrollTop: $('.content-main')[0].scrollHeight}, 'fast')
