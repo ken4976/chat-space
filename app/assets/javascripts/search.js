@@ -8,7 +8,7 @@ $(function(){
             </div>`
                 $("#user-search-result").append(html);
   }
-  function appendNoUser(user) {
+  function appendNoUser(user){
     var html = ``
     $("#user-search-result").append(html);
   };
