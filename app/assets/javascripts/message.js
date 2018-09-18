@@ -1,22 +1,21 @@
 $(function(){
   function buildHTML(message){
-    if (message.image == null) {
-      message.image = ""
-    }
+    if (message.image == null) message.image = "";
+
+
     var html =
-    `<div class = content-main__message data-message-id="${message.id}" data-group-id="${message.group_id}">
-    <div class = content-main__message__name>
-    ${message.user_name}
-    </div>
-    <div class = content-main__message__days>
-    ${message.created_at}
-    </div>
-    <div class = content-main__message__message>
-    ${message.content}
-    <img src="${message.image}">
-    </div>
-    </div>`
-    console.log(html)
+            `<div class = content-main__message data-message-id="${message.id}" data-group-id="${message.group_id}">
+              <div class = content-main__message__name>
+                ${message.user_name}
+              </div>
+              <div class = content-main__message__days>
+                ${message.created_at}
+              </div>
+              <div class = content-main__message__message>
+              ${message.content}
+              <img src="${message.image}">
+              </div>
+            </div>`
     return html;
   }
   $('#new_message').on('submit', function(e){
